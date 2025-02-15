@@ -1,8 +1,29 @@
-# React + Vite
+# Portfólio Pessoal
+Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O objetivo deste projeto é apresentar meus trabalhos, habilidades e experiências de forma interativa e visualmente atraente.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologias Utilizadas
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida e leve para projetos front-end.
+- **CSS**: Estilização das páginas.
+- **JavaScript**: Lógica de programação.
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `/src`: Contém todos os arquivos de código-fonte do projeto.
+- `/components`: Componentes reutilizáveis do React.
+- `/pages`: Páginas do site.
+- `/assets`: Arquivos estáticos como imagens e fontes.
+
+## Status de Desenvolvimento
+
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+
+Este projeto está atualmente em desenvolvimento. Novas funcionalidades e melhorias estão sendo adicionadas regularmente.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+## Contato
+
+Para mais informações, entre em contato através do [meu email](mailto:leandrogiovani@outlook.com).
