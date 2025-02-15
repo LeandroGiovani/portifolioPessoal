@@ -1,0 +1,45 @@
+@keyframes fillName{
+    to{
+        fill: rgba(242, 242, 242, 1);
+    }
+}
+
+@keyframes animate-svg{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulsIn{
+    0%{
+      box-shadow: inset 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+  
+    50%, 100%{
+      box-shadow: inset 0 0 0 0 #fff;
+      opacity: 0;
+    }
+}
+  
+@keyframes pulsOut{
+    0%, 50%{
+      box-shadow: 0 0 0 0 #fff;
+      opacity: 0;
+    }
+  
+    100%{
+      box-shadow: 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+}  
+
+@keyframes animBackground{
+  0%{
+    top: -60px;
+  }
+
+  100%{
+    top: 120%;
+  }
+}
