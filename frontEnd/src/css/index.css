@@ -1,43 +1,32 @@
-:root{
-  --backColor: #242424;
-  --fontColor: #fff;
-}
+@import "tailwindcss";
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: .3s all;
+  @apply m-0 p-0 box-border transition-all duration-300;
+}
+
+*::-webkit-scrollbar {
+  @apply w-1 h-1 bg-transparent;
+}
+  
+*::-webkit-scrollbar-thumb {
+  @apply bg-zinc-400 rounded-full;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color: var(--backColor);
-  color: var(--fontColor);
-  font-family: 'Roboto', sans-serif;
+  @apply bg-zinc-900 text-zinc-50 font-sans h-full;
 }
 
 .name__intro{
-  font-size: 10em;
-  letter-spacing: 1px;
-  min-height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  background-color: #222;
-  transition: .4s all linear;
-  z-index: 9999;
+  @apply absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50;
 }
 
 .name__intro svg{
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 35%;
-  transition: .3s all linear;
+  @apply absolute top-1/2 left-1/2 h-screen w-4/12 transform -translate-1/2 max-[1500px]:w-7/12 hidden fill-transparent;
   animation: fillName ease .3s forwards 4.5s;
-  fill: rgba(242, 242, 242, 0);
 }
 
 #name path:nth-child(1){
@@ -124,24 +113,6 @@ body{
   animation: animate-svg 2s ease-in-out forwards 0.15s;
 }
 
-.div_loader{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 6rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .loader:before, .loader:after{
   content: "";
   position: absolute;
@@ -161,4 +132,20 @@ body{
   width: calc(100% - 2rem);
   padding-bottom: calc(100% - 2rem);
   box-shadow: 0 0 0 0 #fff;
+}
+
+.menu-btn{
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,shadow] active:scale-95 hover:cursor-pointer
+}
+
+.navbar{
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200
+}
+
+.navbar.active{
+  @apply opacity-100 scale-100 blur-[0] visible
+}
+
+.nav-link{
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
 }

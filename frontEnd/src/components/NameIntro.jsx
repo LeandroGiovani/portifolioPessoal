@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react'
 
 const NameIntro = () => {
@@ -33,8 +32,8 @@ const NameIntro = () => {
 
     return (
         <section className="name__intro">
-            <div className="div_loader">
-                <div className="loader"></div>
+            <div className="div_loader flex items-center justify-center h-screen bg-zinc-900 z-60">
+                <div className="loader relative flex items-center justify-center w-full max-w-24 mt-12 mb-12"></div>
             </div>
             <svg viewBox="0 0 608 188" fill="none" xmlns="http://www.w3.org/2000/svg" id="name">
                 <path d="M566.473 171.2H575.273V184H536.073V171.2H544.873H546.873V169.2V118.8V116.8H544.873H536.073V104H575.273V116.8H566.473H564.473V118.8V169.2V171.2H566.473Z" stroke="#F2F2F2" strokeWidth={strokeW}/>

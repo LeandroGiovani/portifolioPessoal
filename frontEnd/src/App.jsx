@@ -1,14 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import NameIntro from './pages/NameIntro'
-import Navbar from './pages/Navnar'
+import NameIntro from './components/NameIntro'
+import Header from './components/Header'
 import Home from './pages/Home'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      <NameIntro />
-      <Navbar />
+      {/* <NameIntro /> */}
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />}/>
