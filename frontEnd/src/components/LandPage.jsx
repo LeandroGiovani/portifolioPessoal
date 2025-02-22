@@ -1,5 +1,6 @@
 import Leandro from '../assets/img/leandroPng.png'
 import Leandro2 from '../assets/img/leandroFoto2.png'
+import DownloadCV from '../assets/doc/teste.pdf'
 import { BtnPrimary, BtnSecondary } from './Buttons'
 
 const LandPage = () => {
@@ -37,7 +38,7 @@ const LandPage = () => {
             <BtnPrimary 
               label="Baixar Currículo"
               icon="download"
-              href="/"
+              href={DownloadCV}
             />
 
             <BtnSecondary 

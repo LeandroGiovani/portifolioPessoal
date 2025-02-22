@@ -1,5 +1,3 @@
-
-
 const BtnPrimary = ({ 
     href,
     target = '_self',
@@ -11,6 +9,7 @@ const BtnPrimary = ({
     return(
       <a 
         href={href}
+        download={"Currículo - Leandro Maciel Giovani"}
         target={target}
         className={"btn btn-primary " + classes}
       >
