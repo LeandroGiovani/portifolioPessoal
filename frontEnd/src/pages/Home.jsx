@@ -1,6 +1,8 @@
+import LandPage from "../components/LandPage"
+
 const Home = () => {
   return (
-    <></>
+    <LandPage />
   )
 }
 
