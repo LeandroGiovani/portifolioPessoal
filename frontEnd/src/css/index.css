@@ -183,7 +183,8 @@ body{
   @apply w-full h-full object-cover
 }
 
-.portifolio__title{
+.portifolio-title,
+.skills-title{
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #9e9e9e);
   background-clip: text;
@@ -208,4 +209,8 @@ body{
 
 .section{
   @apply pt-20 lg:pt-32
+}
+
+.skills-title{
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
 }

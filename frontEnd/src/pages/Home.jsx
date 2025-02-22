@@ -1,5 +1,6 @@
 import LandPage from "../components/LandPage"
 import About from "../components/About"
+import Skill from "../components/Skill"
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <LandPage />
 
       <About />
+      <Skill />
     </>
   )
 }

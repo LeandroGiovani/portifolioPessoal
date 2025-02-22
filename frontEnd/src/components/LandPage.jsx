@@ -29,7 +29,7 @@ const LandPage = () => {
             </div>
           </div>
 
-          <h2 className="portifolio__title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15] lg:mb-10">
+          <h2 className="portifolio-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15] lg:mb-10">
             <span className="">Olá, eu sou<br></br></span>
             Leandro Maciel Giovani
           </h2>
