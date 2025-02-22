@@ -6,7 +6,7 @@
 } */
 
 *{
-  @apply m-0 p-0 box-border transition-all duration-300;
+  @apply box-border transition-all duration-300;
 }
 
 *::-webkit-scrollbar {
@@ -160,7 +160,7 @@ body{
 }
 
 .navbar .active__box{
-  @apply absolute h-9 bg-zinc-50 rounded-lg -z-10 transition-[top,left,width] duration-500
+  @apply absolute h-9 rounded-lg -z-10 transition-[top,left,width] duration-500 bg-gradient-to-br from-zinc-50 to-zinc-50/70
 }
 
 .btn{
@@ -169,4 +169,39 @@ body{
 
 .btn-secondary{
   @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80 max-md:hidden
+}
+
+.container{
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl
+}
+
+.img-box{
+  @apply bg-zinc-700 overflow-hidden
+}
+
+.img-cover{
+  @apply w-full h-full object-cover
+}
+
+.portifolio__title{
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #9e9e9e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn .material-symbols-rounded{
+  @apply text-[18px]
+}
+
+.btn:has(.material-symbols-rounded){
+  @apply pr-3
+}
+
+.btn-primary{
+  @apply h-11 text-zinc-950 bg-gradient-to-br from-zinc-50 to-zinc-50/70 hover:bg-zinc-50 active:bg-zinc-200
+}
+
+.btn-about{
+  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
 }
