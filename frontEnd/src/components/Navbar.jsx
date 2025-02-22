@@ -23,11 +23,13 @@ const Navbar = ({ navOpen }) => {
       activeBox.current.style.left = currentLink.target.offsetLeft + 'px';
       activeBox.current.style.width = currentLink.target.offsetWidth + 'px';
       activeBox.current.style.height = currentLink.target.offsetHeight + 'px';
+
+      currentLink.target.text === 'Página Inicial' ? window.scroll(0, 0) : undefined
     }
 
     const navItems = [
         {
-          label: 'Página Incial',
+          label: 'Página Inicial',
           link: '#home',
           className: 'nav-link active',
           ref: lastActiveLink

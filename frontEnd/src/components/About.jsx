@@ -18,8 +18,8 @@ const About = () => {
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[70ch] text-justify">
                     Bem-vindo! Meu nome é Leandro, sou um desenvolvedor web apaixonado por tecnologia e estou no início da minha jornada no mundo da programação. Possuo formação técnica em Análise e Desenvolvimento de Sistemas pelo SENAI e, em 2025, iniciei minha graduação em Sistemas de Informação no Centro Universitário da Fundação Educacional de Barretos - UNIFEB.
-
-                    Sou uma pessoa ambiciosa e dedicada, sempre buscando aprimorar minhas habilidades e evoluir tanto pessoal quanto tecnicamente. Meu objetivo é atuar na área que tanto me fascina, enfrentando desafios com entusiasmo e determinação. Estou comprometido em crescer como profissional e contribuir para projetos inovadores no universo do desenvolvimento.
+                    <br></br>
+                    Sou uma pessoa focada e dedicada, sempre buscando aprimorar minhas habilidades e evoluir tanto pessoal quanto tecnicamente. Meu objetivo é atuar na área que tanto me fascina, enfrentando desafios com entusiasmo e determinação. Estou comprometido em crescer como profissional e contribuir para projetos inovadores no universo do desenvolvimento.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7">
