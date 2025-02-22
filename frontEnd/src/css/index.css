@@ -17,11 +17,11 @@ html{
 }
 
 body{
-  @apply bg-zinc-900 text-zinc-50 font-sans h-full;
+  @apply bg-zinc-900 text-zinc-50 font-sans h-full
 }
 
 .name__intro{
-  @apply absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50;
+  @apply absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50
 }
 
 .name__intro svg{
@@ -139,7 +139,7 @@ body{
 }
 
 .navbar{
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200 md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-[0] md:visible md:scale-100 backdrop-blur-2xl
 }
 
 .navbar.active{
@@ -148,4 +148,12 @@ body{
 
 .nav-link{
   @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+}
+
+.nav-link.active{
+  @apply text-zinc-900 duration-500
+}
+
+.navbar .active__box{
+  @apply absolute h-9 bg-zinc-50 rounded-lg -z-10 transition-[top,left,width] duration-500
 }
