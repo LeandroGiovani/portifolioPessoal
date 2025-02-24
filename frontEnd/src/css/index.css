@@ -185,7 +185,9 @@ body{
 
 .portifolio-title,
 .skills-title,
-.projects-title{
+.projects-title,
+.contact-title,
+.footer-title{
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #9e9e9e);
   background-clip: text;
@@ -212,10 +214,26 @@ body{
   @apply pt-20 lg:pt-32
 }
 
-.skills-title, .projects-title{
+.sectionF{
+  @apply pt-10 mt-10 lg:pt-16 lg:mt-16
+}
+
+.skills-title, .projects-title, .contact-title{
   @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
 }
 
 .title-1{
   @apply text-[22px] font-normal
+}
+
+.label{
+  @apply block text-zinc-200 text-sm font-normal mb-2
+}
+
+.text-field{
+  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5 focus:ring-zinc-50/70 focus:ring-2
+}
+
+.text-field::placeholder{
+  @apply text-zinc-400
 }

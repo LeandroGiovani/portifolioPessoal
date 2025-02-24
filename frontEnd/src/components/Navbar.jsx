@@ -42,7 +42,7 @@ const Navbar = ({ navOpen }) => {
         {
           label: 'Contate-me',
           link: '#contact',
-          className: 'nav-link md:!hidden'
+          className: 'nav-link'
         }
     ];
 
