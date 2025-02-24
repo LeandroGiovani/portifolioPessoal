@@ -29,7 +29,7 @@ const Projects = () => {
     <section className="section" id="projects">
         <div className="container">
 
-            <h2 className="projects-title mb-8">
+            <h2 className="projects-title mb-8 reveal-up">
                 Destaques do meu portifólio
             </h2>
 
@@ -41,6 +41,7 @@ const Projects = () => {
                         title={title}
                         tags={tags}
                         projectLink={projectLink}
+                        classes="reveal-up"
                     />
                 ))}
             </div>

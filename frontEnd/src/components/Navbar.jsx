@@ -11,7 +11,13 @@ const Navbar = ({ navOpen }) => {
       activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
     }
 
-    useEffect(initActiveBox, [])
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        initActiveBox();
+      }, 6301);
+  
+      return () => clearTimeout(timer);
+    }, []);
 
     const scrollTop = (current) => {
       current.target.text === 'Página Inicial' ? window.scroll(0, 0) : undefined
@@ -21,28 +27,28 @@ const Navbar = ({ navOpen }) => {
         {
           label: 'Página Inicial',
           link: '#home',
-          className: 'nav-link active',
+          className: 'nav-link active revealNav6 hid',
           ref: lastActiveLink
         },
         {
           label: 'Sobre',
           link: '#about',
-          className: 'nav-link'
+          className: 'nav-link revealNav3 hid'
         },
         {
           label: 'Tecnologias',
           link: '#skills',
-          className: 'nav-link'
+          className: 'nav-link revealNav hid'
         },
         {
           label: 'Projetos',
           link: '#projects',
-          className: 'nav-link'
+          className: 'nav-link revealNav3 hid'
         },
         {
           label: 'Contate-me',
           link: '#contact',
-          className: 'nav-link'
+          className: 'nav-link revealNav6 hid'
         }
     ];
 

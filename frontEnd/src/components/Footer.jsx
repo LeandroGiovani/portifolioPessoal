@@ -52,28 +52,22 @@ const Footer = () => {
           <div className="lg:grid grid-cols-2">
 
             <div className="mb-10">
-                <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10">
+                <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10 reveal-up">
                     Obrigado por visitar!
                 </h2>
-
-                <BtnPrimary 
-                    href="mailto:leandrogiovani@outlook.com"
-                    label="Start project"
-                    icon="chevron_right"
-                />
             </div>
 
             <div className="grid grid-cols-2 gap-4 lg:pl-20">
 
                 <div>
-                    <p className="mb-2">Mapa do site</p>
+                    <p className="mb-2 reveal-up">Mapa do site</p>
 
                     <ul>
                         {sitemap.map(({ label, href }, key) => (
                             <li key={key}>
                                 <a 
                                     href={href}
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200"
+                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 reveal-up"
                                     onClick={scrollTop}
                                 >
                                     {label}
@@ -84,7 +78,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className="mb-2">Redes sociais</p>
+                    <p className="mb-2 reveal-up">Redes sociais</p>
 
                     <ul>
                         {socials.map(({ label, href }, key) => (
@@ -92,7 +86,7 @@ const Footer = () => {
                                 <a 
                                     href={href}
                                     target="_blank"
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200"
+                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 reveal-up"
                                 >
                                     {label}
                                 </a>
@@ -108,6 +102,7 @@ const Footer = () => {
           <div className="flex items-center justify-between pt-10 mb-8">
             <Link 
                 to="/" 
+                className="logo reveal-up"
             >
                 <img 
                     src={logo}
@@ -117,7 +112,7 @@ const Footer = () => {
                 />
             </Link>
 
-            <p className="text-zinc-500 text-sm">
+            <p className="text-zinc-500 text-sm reveal-up">
                 &copy; 2025 <span className="text-zinc-200">LeandroGiovani</span>
             </p>
           </div>

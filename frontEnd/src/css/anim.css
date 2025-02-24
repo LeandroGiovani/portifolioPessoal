@@ -45,3 +45,30 @@
     top: 120%;
   }
 }
+
+.revealNav.hid{
+  display: none;
+  transform: translate(0, 80px);
+  animation: .4s translateN ease-in-out forwards;
+  animation-delay: 300ms;
+}
+
+.revealNav3.hid{
+  display: none;
+  transform: translate(0, 80px);
+  animation: .4s translateN ease-in-out forwards;
+  animation-delay: 450ms;
+}
+
+.revealNav6.hid{
+  display: none;
+  transform: translate(0, 80px);
+  animation: .4s translateN ease-in-out forwards;
+  animation-delay: 600ms;
+}
+
+@keyframes translateN{
+  to{
+    transform: translate(0px, 0px);
+  }
+}

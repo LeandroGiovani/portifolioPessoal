@@ -25,6 +25,10 @@ body{
   @apply bg-zinc-900 text-zinc-50 font-sans h-full
 }
 
+.reveal-up{
+  @apply translate-y-20 opacity-0
+}
+
 .name__intro{
   @apply fixed top-0 left-0 w-full h-screen bg-zinc-900 z-50
 }
@@ -144,7 +148,7 @@ body{
 }
 
 .navbar{
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200 md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-[0] md:visible md:scale-100 backdrop-blur-2xl
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200 min-[920px]:static min-[920px]:flex min-[920px]:items-center min-[920px]:mt-0 min-[920px]:opacity-100 min-[920px]:blur-[0] min-[920px]:visible min-[920px]:scale-100 backdrop-blur-2xl  overflow-hidden
 }
 
 .navbar.active{

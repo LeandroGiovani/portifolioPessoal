@@ -56,11 +56,11 @@ const Skill = () => {
     <section className="section" id="skills">
         <div className="container">
 
-            <h2 className="skills-title">
+            <h2 className="skills-title reveal-up">
                 Principais Tecnologias que Utilizo
             </h2>
 
-            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
+            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
                 Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
             </p>
 
@@ -72,6 +72,7 @@ const Skill = () => {
                             imgSrc={imgSrc}
                             label={label}
                             desc={desc}
+                            classes="reveal-up"
                         />
                     ))
                 }
