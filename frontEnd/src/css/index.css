@@ -26,7 +26,7 @@ body{
 }
 
 .name__intro{
-  @apply absolute top-0 left-0 w-full h-screen bg-zinc-900 z-50
+  @apply fixed top-0 left-0 w-full h-screen bg-zinc-900 z-50
 }
 
 .name__intro svg{

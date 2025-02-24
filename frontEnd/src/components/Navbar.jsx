@@ -12,19 +12,9 @@ const Navbar = ({ navOpen }) => {
     }
 
     useEffect(initActiveBox, [])
-    window.addEventListener('resize', initActiveBox)
 
-    const activeCurrentLink = (currentLink) => {
-      lastActiveLink.current?.classList.remove('active')
-      currentLink.target.classList.add('active')
-      lastActiveLink.current = currentLink.target
-
-      activeBox.current.style.top = currentLink.target.offsetTop + 'px';
-      activeBox.current.style.left = currentLink.target.offsetLeft + 'px';
-      activeBox.current.style.width = currentLink.target.offsetWidth + 'px';
-      activeBox.current.style.height = currentLink.target.offsetHeight + 'px';
-
-      currentLink.target.text === 'Página Inicial' ? window.scroll(0, 0) : undefined
+    const scrollTop = (current) => {
+      current.target.text === 'Página Inicial' ? window.scroll(0, 0) : undefined
     }
 
     const navItems = [
@@ -37,6 +27,11 @@ const Navbar = ({ navOpen }) => {
         {
           label: 'Sobre',
           link: '#about',
+          className: 'nav-link'
+        },
+        {
+          label: 'Tecnologias',
+          link: '#skills',
           className: 'nav-link'
         },
         {
@@ -59,7 +54,7 @@ const Navbar = ({ navOpen }) => {
                     key={key}
                     ref={ref}
                     className={className}
-                    onClick={activeCurrentLink}
+                    onClick={scrollTop}
                 >
                     {label}
                 </a>

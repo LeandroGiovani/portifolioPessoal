@@ -19,6 +19,7 @@ const NameIntro = () => {
             introName.style.display = 'block'
             setTimeout(() => {
                 introNamePage.style.opacity = 0
+                window.scroll(0, 0)
                 setTimeout(() => {
                     introNamePage.remove()
                 }, 600)
