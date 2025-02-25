@@ -67,8 +67,62 @@
   animation-delay: 600ms;
 }
 
+.revealNav9{
+  display: none;
+  transform: translate(0, -80px);
+  animation: .4s translateN ease-in-out forwards;
+  animation-delay: 750ms;
+}
+
 @keyframes translateN{
   to{
     transform: translate(0px, 0px);
+  }
+}
+
+.revealLandPage1.hidd{
+  display: none;
+  transform: translate(0, 80px);
+  opacity: 0;
+  animation: .4s fadeIn ease-in-out forwards;
+  animation-delay: 900ms;
+}
+
+.revealLandPage2.hidd{
+  display: none;
+  transform: translate(0, 80px);
+  opacity: 0;
+  animation: .4s fadeIn ease-in-out forwards;
+  animation-delay: 1050ms;
+}
+
+.revealLandPage3.hidd{
+  display: none;
+  transform: translate(0, 80px);
+  opacity: 0;
+  animation: .4s fadeIn ease-in-out forwards;
+  animation-delay: 1200ms;
+}
+
+.revealLandPage4.hidd{
+  display: none;
+  transform: translate(0, 80px);
+  opacity: 0;
+  animation: .4s fadeIn ease-in-out forwards;
+  animation-delay: 1350ms;
+}
+
+.revealLandPageProfile.hidd{
+  display: none;
+  transform: translate(80px, 0);
+  opacity: 0;
+  animation: .4s fadeIn ease-in-out forwards;
+  animation-delay: 1350ms;
+}
+
+@keyframes fadeIn{
+  to{
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }

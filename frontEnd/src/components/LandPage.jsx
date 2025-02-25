@@ -9,7 +9,7 @@ const LandPage = () => {
       <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
 
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 revealLandPage1 hidd">
             <figure className="img-box w-9 h-9 rounded-lg">
               <img 
                 src={Leandro2}
@@ -29,12 +29,12 @@ const LandPage = () => {
             </div>
           </div>
 
-          <h2 className="portifolio-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15] lg:mb-10">
+          <h2 className="portifolio-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15] lg:mb-10 revealLandPage2 hidd flex-col">
             <span className="">Olá, eu sou<br></br></span>
             Leandro Maciel Giovani
           </h2>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 revealLandPage3 hidd">
             <BtnPrimary 
               label="Baixar Currículo"
               icon="download"
@@ -49,7 +49,7 @@ const LandPage = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block revealLandPageProfile hidd">
           <figure className="p-1 w-full rounded-full overflow-hidden bg-gradient-to-br from-zinc-50 to-zinc-50/70">
             <img 
               src={Leandro} 

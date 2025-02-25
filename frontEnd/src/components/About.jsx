@@ -15,7 +15,7 @@ const About = () => {
   return (
     <section className="section" id="about">
         <div className="container">
-            <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
+            <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 flex-col revealLandPage4 hidd">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[70ch] text-justify">
                     Bem-vindo! Meu nome é Leandro, sou um desenvolvedor web apaixonado por tecnologia e estou no início da minha jornada no mundo da programação. Possuo formação técnica em Análise e Desenvolvimento de Sistemas pelo SENAI e, em 2025, iniciei minha graduação em Sistemas de Informação no Centro Universitário da Fundação Educacional de Barretos - UNIFEB.
                     <br></br>

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const NameIntro = () => {
     const strokeW = 3
     const [intro, setIntro] = useState(false)
     const navItem = document.querySelectorAll('.hid')
+    const navBtns = document.querySelectorAll('.revealNav9')
+    const landItems = document.querySelectorAll('.hidd')
     const activeBox = document.querySelector('.active__box')
     
     useEffect(() => {
@@ -23,12 +26,19 @@ const NameIntro = () => {
                 navItem.forEach((item) => {
                     item.getAttribute('href') === '#home' ? (initNav(item)) : item.style.display = 'grid'
                 })
+                navBtns.forEach((item) =>{
+                    item.style.display = 'flex'
+                })
+                landItems.forEach((item) => {
+                    item.style.display = 'flex'
+                })
+                ScrollTrigger.refresh()
                 introNamePage.style.opacity = 0
                 window.scroll(0, 0)
                 setTimeout(() => {
                     introNamePage.style.display = 'none'
                 }, 300)
-            }, 4750)
+            }, 3850)
         }
 
         const initNav = (navL) => {

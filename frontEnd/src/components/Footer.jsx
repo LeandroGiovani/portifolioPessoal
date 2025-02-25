@@ -99,7 +99,7 @@ const Footer = () => {
 
           </div>
 
-          <div className="flex items-center justify-between pt-10 mb-8">
+          <div className="flex items-center justify-between pt-10 mb-26">
             <Link 
                 to="/" 
                 className="logo reveal-up"
