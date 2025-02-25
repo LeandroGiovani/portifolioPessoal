@@ -4,6 +4,7 @@ const NameIntro = () => {
     const strokeW = 3
     const [intro, setIntro] = useState(false)
     const navItem = document.querySelectorAll('.hid')
+    const activeBox = document.querySelector('.active__box')
     
     useEffect(() => {
         const handleLoad = () => {
@@ -19,13 +20,23 @@ const NameIntro = () => {
 
             introName.style.display = 'block'
             setTimeout(() => {
-                navItem.forEach((item) => item.style.display = 'grid')
+                navItem.forEach((item) => {
+                    item.getAttribute('href') === '#home' ? (initNav(item)) : item.style.display = 'grid'
+                })
                 introNamePage.style.opacity = 0
                 window.scroll(0, 0)
                 setTimeout(() => {
                     introNamePage.style.display = 'none'
                 }, 300)
             }, 6000)
+        }
+
+        const initNav = (navL) => {
+            navL.style.display = 'grid'
+            activeBox.style.top = navL.offsetTop + 'px';
+            activeBox.style.left = navL.offsetLeft + 'px';
+            activeBox.style.width = navL.offsetWidth + 'px';
+            activeBox.style.height = navL.offsetHeight + 'px';
         }
 
         return () => {
@@ -54,10 +65,6 @@ const NameIntro = () => {
                 <path d="M102.007 71.2H145.007V84H82.407V4H145.007V16.8H102.007H100.007V18.8V35V37H102.007H135.407V49.8H102.007H100.007V51.8V69.2V71.2H102.007Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
                 <path d="M20.1789 69.2V71.2H22.1789H63.9789V84H2.57892V4H20.1789V69.2Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
             </svg> 
-            <iframe style={{ display: 'none' }} width="560" height="315" src="https://www.youtube.com/embed/k3JMkRwd_Nw?si=Kke6ZT1vqGC4WmK9"></iframe>
-            <iframe style={{ display: 'none' }} width="560" height="315" src="https://www.youtube.com/embed/k3JMkRwd_Nw?si=Kke6ZT1vqGC4WmK9"></iframe>
-            <iframe style={{ display: 'none' }} width="560" height="315" src="https://www.youtube.com/embed/k3JMkRwd_Nw?si=Kke6ZT1vqGC4WmK9"></iframe>
-            <iframe style={{ display: 'none' }} width="560" height="315" src="https://www.youtube.com/embed/k3JMkRwd_Nw?si=Kke6ZT1vqGC4WmK9"></iframe>
         </section>
         
     )
