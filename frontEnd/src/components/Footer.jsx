@@ -25,19 +25,19 @@ const sitemap = [
     }
 ];
   
-  const socials = [
-    {
-      label: 'GitHub',
-      href: 'https://www.github.com/LeandroGiovani'
-    },
-    {
-      label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/'
-    },
-    {
-      label: 'Instagram',
-      href: 'https://www.instagram.com/leandro__giovani'
-    },
+const socials = [
+  {
+    label: 'GitHub',
+    href: 'https://www.github.com/LeandroGiovani'
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/'
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/leandro__giovani'
+  },
 ];
 
 const scrollTop = (current) => {
@@ -67,7 +67,7 @@ const Footer = () => {
                             <li key={key}>
                                 <a 
                                     href={href}
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 reveal-up"
+                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
                                     onClick={scrollTop}
                                 >
                                     {label}
@@ -86,7 +86,7 @@ const Footer = () => {
                                 <a 
                                     href={href}
                                     target="_blank"
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 reveal-up"
+                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
                                 >
                                     {label}
                                 </a>

@@ -1,6 +1,6 @@
 const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
   return (
-    <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/10 " + classes}>
+    <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/10 transition-colors duration-300 " + classes}>
         
         <figure className="img-box aspect-square rounded-lg mb-4">
             <img 

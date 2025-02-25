@@ -28,7 +28,7 @@ const NameIntro = () => {
                 setTimeout(() => {
                     introNamePage.style.display = 'none'
                 }, 300)
-            }, 6000)
+            }, 4750)
         }
 
         const initNav = (navL) => {

@@ -1,6 +1,6 @@
 import Leandro from '../assets/img/leandroPng.png'
 import Leandro2 from '../assets/img/leandroFoto2.png'
-import DownloadCV from '../assets/doc/teste.pdf'
+import DownloadCV from '../assets/doc/leandroCV.pdf'
 import { BtnPrimary, BtnSecondary } from './Buttons'
 
 const LandPage = () => {
