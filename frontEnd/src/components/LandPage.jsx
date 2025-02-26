@@ -34,15 +34,16 @@ const LandPage = () => {
             <span className='portifolio-subtitle'>Olá, eu sou<br></br></span>
               <TypeAnimation
                 sequence={[
-                  'Leandro Maciel Giovani',
-                  1000,
                   'Desenvolvedor Front-end',
                   1000,
                   'Apaixonado por programação',
                   1000,
+                  'Leandro Maciel Giovani',
+                  1000,
                 ]}
                 wrapper="span"
-                speed={75}
+                speed={160}
+                deletionSpeed={125}
                 repeat={Infinity}
                 preRenderFirstString={true}
                 className="text-5xl font-bold leading-snug"
