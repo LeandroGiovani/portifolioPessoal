@@ -2,11 +2,12 @@ import Leandro from '../assets/img/leandroPng.png'
 import Leandro2 from '../assets/img/leandroFoto2.png'
 import DownloadCV from '../assets/doc/leandroCV.pdf'
 import { BtnPrimary, BtnSecondary } from './Buttons'
+import { TypeAnimation } from 'react-type-animation';
 
 const LandPage = () => {
   return (
     <section className="pt-28 lg:pt-36" id="landPage">
-      <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
+      <div className="container items-center lg:grid lg:gap-10 min-lg:grid-cols-[3.09fr_1fr] min-xl:grid-cols-[1.95fr_1fr]">
 
         <div>
           <div className="flex items-center gap-3 revealLandPage1 hidd">
@@ -29,9 +30,23 @@ const LandPage = () => {
             </div>
           </div>
 
-          <h2 className="portifolio-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15] lg:mb-10 revealLandPage2 hidd flex-col">
-            <span className="">Olá, eu sou<br></br></span>
-            Leandro Maciel Giovani
+          <h2 className="portifolio-title text-4xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:leading-[1.15] lg:mb-10 revealLandPage2 hidd flex-col">
+            <span className='portifolio-subtitle'>Olá, eu sou<br></br></span>
+              <TypeAnimation
+                sequence={[
+                  'Leandro Maciel Giovani',
+                  1000,
+                  'Desenvolvedor Front-end',
+                  1000,
+                  'Apaixonado por programação',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={75}
+                repeat={Infinity}
+                preRenderFirstString={true}
+                className="text-5xl font-bold leading-snug"
+              />
           </h2>
 
           <div className="flex items-center gap-3 revealLandPage3 hidd">
@@ -49,7 +64,7 @@ const LandPage = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block revealLandPageProfile hidd">
+        <div className="block max-lg:!hidden revealLandPageProfile hidd">
           <figure className="p-1 w-full rounded-full overflow-hidden bg-gradient-to-br from-zinc-50 to-zinc-50/70">
             <img 
               src={Leandro} 
