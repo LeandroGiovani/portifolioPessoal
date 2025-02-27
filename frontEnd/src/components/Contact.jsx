@@ -1,3 +1,19 @@
+// Copyright 2025 LeandroGiovani
+
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+
+//     http://www.apache.org/licenses/LICENSE-2.0
+
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+import ContactForm from "./ContactForm";
+
 const Contact = () => {
     const socialLinks = [
         {
@@ -52,79 +68,7 @@ const Contact = () => {
 
             </div>
 
-            <form 
-                action="https://getform.io/f/bmdkklea"
-                method="POST"
-                className="xl:pl-10 2xl:pl-20"
-            >
-
-                <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
-                    <div className="mb-4">
-                        <label 
-                            htmlFor="name"
-                            className="label reveal-up"
-                        >
-                            Nome
-                        </label>
-
-                        <input 
-                            type="text" 
-                            name="name" 
-                            id="name"
-                            autoComplete="name"
-                            required
-                            placeholder="Leandro Giovani"
-                            className="text-field reveal-up"
-                        />
-                    </div>
-
-                    <div className="mb-4">
-                        <label 
-                            htmlFor="email"
-                            className="label reveal-up"
-                        >
-                            Email
-                        </label>
-
-                        <input 
-                            type="email" 
-                            name="email" 
-                            id="email"
-                            autoComplete="email"
-                            required
-                            placeholder="leandro@exemplo.com"
-                            className="text-field reveal-up"
-                        />
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <label 
-                        htmlFor="message" 
-                        className="label reveal-up"
-                    >
-                        Message
-                    </label>
-
-                    <textarea 
-                        name="message" 
-                        id="message"
-                        placeholder="Olá!"
-                        required
-                        className="text-field resize-y min-h-32 max-h-80 reveal-up"
-                    >
-
-                    </textarea>
-                </div>
-
-                <button 
-                    type="submit" 
-                    className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer reveal-up"
-                >
-                    Enviar
-                </button>
-
-            </form>
+            <ContactForm />
 
         </div>
     </section>
