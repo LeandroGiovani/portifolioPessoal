@@ -16,19 +16,19 @@ Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite.
 ## Estrutura do Projeto
 
 - `/src`: Contém todos os arquivos de código-fonte do projeto.
-  - `/components`: Componentes reutilizáveis do React.
-  - `/pages`: Páginas do site.
-  - `/assets`: Arquivos estáticos como imagens e fontes.
+- `/components`: Componentes reutilizáveis do React.
+- `/pages`: Páginas do site.
+- `/assets`: Arquivos estáticos como imagens e fontes.
 
 ## Como Executar o Projeto
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/LeandroGiovani/portifolioPessoal.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   cd seu-repositorio
+   cd portifolioPessoal/
    ```
 3. Instale as dependências:
    ```bash
