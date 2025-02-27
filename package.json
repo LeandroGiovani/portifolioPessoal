@@ -1,0 +1,21 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O objetivo deste projeto é apresentar meus trabalhos, habilidades e experiências de forma interativa e visualmente atraente.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm instal --prefix frontEnd && npm run build --prefix frontEnd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeandroGiovani/portifolioPessoal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeandroGiovani/portifolioPessoal/issues"
+  },
+  "homepage": "https://github.com/LeandroGiovani/portifolioPessoal#readme"
+}
