@@ -4,7 +4,7 @@
   "description": "Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O objetivo deste projeto é apresentar meus trabalhos, habilidades e experiências de forma interativa e visualmente atraente.",
   "main": "index.js",
   "scripts": {
-    "build": "npm instal --prefix frontEnd && npm instal --prefix backEnd && npm run build --prefix frontEnd",
+    "build": "npm install --prefix frontEnd && npm install --prefix backEnd && npm run build --prefix frontEnd",
     "start": "npm run start --prefix backEnd"
   },
   "repository": {
