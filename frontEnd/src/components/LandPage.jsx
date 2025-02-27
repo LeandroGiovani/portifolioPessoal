@@ -44,7 +44,7 @@ const LandPage = () => {
             </div>
           </div>
 
-          <h2 className="portifolio-title text-4xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:leading-[1.15] lg:mb-10 revealLandPage2 hidd flex-col">
+          <h2 className="portifolio-title text-4xl max-md:text-2xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] lg:leading-[1.15] lg:mb-10 revealLandPage2 hidd flex-col">
             <span className='portifolio-subtitle'>Olá, eu sou<br></br></span>
               <TypeAnimation
                 sequence={[
@@ -60,7 +60,7 @@ const LandPage = () => {
                 deletionSpeed={125}
                 repeat={Infinity}
                 preRenderFirstString={true}
-                className="text-5xl font-bold leading-snug"
+                className="xl:text-5xl text-3xl max-[472px]:!text-2xl font-bold leading-snug"
               />
           </h2>
 
