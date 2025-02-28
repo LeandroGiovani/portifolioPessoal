@@ -1,6 +1,9 @@
 # Portfólio Pessoal
 Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O objetivo deste projeto é apresentar meus trabalhos, habilidades e experiências de forma interativa e visualmente atraente.
 
+## Acesso ao Portifolio
+Você pode acessar a versão hospedada do projeto através do seguinte link: [Projeto Spotify](https://leandro-portifolio-eight.vercel.app). (Isso pode levar algum tempo).
+
 ## Tecnologias Utilizadas
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
 - **Vite**: Ferramenta de build rápida e leve para projetos front-end.
