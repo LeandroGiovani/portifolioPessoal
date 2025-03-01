@@ -29,13 +29,13 @@ const Projects = () => {
           imgSrc: project2,
           title: 'Game Barretos Experience (GBXP)',
           tags: ['Frontend', 'Aplicação Web', 'LocalStorage'],
-          projectLink: 'https://github.com/LeandroGiovani/projetoSpotify'
+          projectLink: 'https://github.com/LeandroGiovani/GBXP'
         },
         {
           imgSrc: project3,
           title: 'Réplica Spotify',
           tags: ['Fullstack', 'API', 'Banco de Dados'],
-          projectLink: 'https://github.com/LeandroGiovani/GBXP'
+          projectLink: 'https://github.com/LeandroGiovani/projetoSpotify'
         },
       ];
 
