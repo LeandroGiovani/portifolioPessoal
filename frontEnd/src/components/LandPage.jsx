@@ -48,11 +48,11 @@ const LandPage = () => {
             <span className='portifolio-subtitle'>Olá, eu sou<br></br></span>
               <TypeAnimation
                 sequence={[
-                  'Desenvolvedor Front-end',
+                  'Desenvolvedor Full Stack',
                   1000,
-                  'Apaixonado por programação',
+                  'Apaixonado por inovação',
                   1000,
-                  'Leandro Maciel Giovani',
+                  'Leandro Giovani',
                   1000,
                 ]}
                 wrapper="span"
