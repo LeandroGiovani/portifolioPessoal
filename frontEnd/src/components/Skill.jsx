@@ -13,84 +13,114 @@
 // limitations under the License.
 
 import SkillCard from "./SkillCard";
-import cssL from "../assets/img/css3.svg"
-import pythonL from "../assets/img/python.svg"
-import jsL from "../assets/img/javascript.svg"
-import nodejsL from "../assets/img/nodejs.svg"
-import expressjsL from "../assets/img/expressjs.svg"
-import mongodbL from "../assets/img/mongodb.svg"
-import reactL from "../assets/img/react.svg"
-import tailwindcssL from "../assets/img/tailwindcss.svg"
+import htmlL from "../assets/img/html5.svg";
+import cssL from "../assets/img/css3.svg";
+import reactL from "../assets/img/react.svg";
+import pythonL from "../assets/img/python.svg";
+import jsL from "../assets/img/javascript.svg";
+import nodejsL from "../assets/img/nodejs.svg";
+import expressjsL from "../assets/img/expressjs.svg";
+import mongodbL from "../assets/img/mongodb.svg";
+import mysqlL from "../assets/img/mysql.svg";
+import postgresqlL from "../assets/img/postgresql.svg";
+import phpL from "../assets/img/php.svg";
+import bootstrapL from "../assets/img/bootstrap.svg";
+import tailwindcssL from "../assets/img/tailwindcss.svg";
 
 const Skill = () => {
-    const skillItem = [
-        {
-          imgSrc: cssL,
-          label: 'CSS',
-          desc: 'Estilização de Interface'
-        },
-        {
-            imgSrc: pythonL,
-            label: 'Python',
-            desc: 'Linguagem Versátil'
-        },
-        {
-          imgSrc: jsL,
-          label: 'JavaScript',
-          desc: 'Interatividade Web'
-        },
-        {
-          imgSrc: nodejsL,
-          label: 'NodeJS',
-          desc: 'Web Server'
-        },
-        {
-          imgSrc: expressjsL,
-          label: 'ExpressJS',
-          desc: 'Node Framework'
-        },
-        {
-          imgSrc: mongodbL,
-          label: 'MongoDB',
-          desc: 'Banco de Dados'
-        },
-        {
-          imgSrc: reactL,
-          label: 'React',
-          desc: 'Framework'
-        },
-        {
-          imgSrc: tailwindcssL,
-          label: 'TailwindCSS',
-          desc: 'Framework de Estilização'
-        },
-    ];
+  const skillItem = [
+    {
+      imgSrc: htmlL,
+      label: 'HTML',
+      desc: 'Estrutura de Interface'
+    },
+    {
+      imgSrc: cssL,
+      label: 'CSS',
+      desc: 'Estilização de Interface'
+    },
+    {
+      imgSrc: reactL,
+      label: 'React',
+      desc: 'Framework'
+    },
+    {
+        imgSrc: pythonL,
+        label: 'Python',
+        desc: 'Linguagem Versátil'
+    },
+    {
+      imgSrc: jsL,
+      label: 'JavaScript',
+      desc: 'Interatividade Web'
+    },
+    {
+      imgSrc: nodejsL,
+      label: 'NodeJS',
+      desc: 'Web Server'
+    },
+    {
+      imgSrc: expressjsL,
+      label: 'ExpressJS',
+      desc: 'Node Framework'
+    },
+    {
+      imgSrc: mongodbL,
+      label: 'MongoDB',
+      desc: 'Banco de Dados'
+    },
+    {
+      imgSrc: mysqlL,
+      label: "MySQL",
+      desc: "Banco de Dados"
+    },
+    {
+      imgSrc: postgresqlL,
+      label: "PostgreSQL",
+      desc: "Banco de Dados"
+    },
+    {
+      imgSrc: phpL,
+      label: "Php",
+      desc: "Linguagem de Backend"
+    },
+    {
+      imgSrc: bootstrapL,
+      label: "Bootstrap",
+      desc: "Framework de Estilização"
+    },
+    {
+      imgSrc: tailwindcssL,
+      label: 'TailwindCSS',
+      desc: 'Framework de Estilização'
+    },
+  ];
 
   return (
     <section className="section" id="skills">
         <div className="container">
 
-            <h2 className="skills-title reveal-up">
-                Principais Tecnologias que Utilizo
-            </h2>
+          <h2 className="skills-title reveal-up">
+              Principais Tecnologias que Utilizo
+          </h2>
 
-            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-                Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
-            </p>
+          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+              Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
+          </p>
 
-            <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
-                {
-                    skillItem.map(({ imgSrc, label, desc }, key) => (
-                        <SkillCard 
-                            key={key}
-                            imgSrc={imgSrc}
-                            label={label}
-                            desc={desc}
-                            classes="reveal-up"
-                        />
-                    ))
-                }
-            </div>
+          <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
+              {
+                  skillItem.map(({ imgSrc, label, desc }, key) => (
+                      <SkillCard 
+                          key={key}
+                          imgSrc={imgSrc}
+                          label={label}
+                          desc={desc}
+                          classes="reveal-up"
+                      />
+                  ))
+              }
+          </div>
 
         </div>
     </section>
