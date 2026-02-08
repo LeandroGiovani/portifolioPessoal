@@ -127,7 +127,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-zinc-500 text-sm reveal-up">
-                &copy; 2025 <span className="text-zinc-200">LeandroGiovani</span>
+                &copy; 2026 <span className="text-zinc-200">Leandro Giovani</span>
             </p>
           </div>
 
