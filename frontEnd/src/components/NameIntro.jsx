@@ -18,54 +18,76 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const NameIntro = () => {
     const strokeW = 3
     const [intro, setIntro] = useState(false)
-    const navItem = document.querySelectorAll('.hid')
-    const navBtns = document.querySelectorAll('.revealNav9')
-    const landItems = document.querySelectorAll('.hidd')
-    const activeBox = document.querySelector('.active__box')
-    
+
     useEffect(() => {
         const handleLoad = () => {
+            const loaderDiv = document.querySelector('.div_loader')
+            if (loaderDiv) loaderDiv.remove()
             setIntro(true)
-            document.querySelector('.div_loader').remove()
         }
 
-        window.addEventListener('load', handleLoad)
-
-        if (intro) {
-            const introName = document.querySelector('.name__intro svg')
-            const introNamePage = document.querySelector('.name__intro')
-
-            introName.style.display = 'block'
-            setTimeout(() => {
-                navItem.forEach((item) => {
-                    item.getAttribute('href') === '#home' ? (initNav(item)) : item.style.display = 'grid'
-                })
-                navBtns.forEach((item) =>{
-                    item.style.display = 'flex'
-                })
-                landItems.forEach((item) => {
-                    item.style.display = 'flex'
-                })
-                ScrollTrigger.refresh()
-                introNamePage.style.opacity = 0
-                window.scroll(0, 0)
-                setTimeout(() => {
-                    introNamePage.style.display = 'none'
-                }, 300)
-            }, 3850)
-        }
-
-        const initNav = (navL) => {
-            navL.style.display = 'grid'
-            activeBox.style.top = navL.offsetTop + 'px';
-            activeBox.style.left = navL.offsetLeft + 'px';
-            activeBox.style.width = navL.offsetWidth + 'px';
-            activeBox.style.height = navL.offsetHeight + 'px';
+        // Garante que o handleLoad seja executado mesmo se o evento 'load' não disparar
+        if (document.readyState === 'complete') {
+            handleLoad()
+        } else {
+            window.addEventListener('load', handleLoad)
         }
 
         return () => {
             window.removeEventListener('load', handleLoad)
         }
+    }, [])
+
+    useEffect(() => {
+        if (!intro) return
+
+        const navItem = document.querySelectorAll('.hid')
+        const navBtns = document.querySelectorAll('.revealNav9')
+        const landItems = document.querySelectorAll('.hidd')
+        const activeBox = document.querySelector('.active__box')
+        const introName = document.querySelector('.name__intro svg')
+        const introNamePage = document.querySelector('.name__intro')
+
+        if (introName) introName.style.display = 'block'
+
+        const initNav = (navL) => {
+            navL.style.display = 'grid'
+            if (activeBox) {
+                activeBox.style.top = navL.offsetTop + 'px'
+                activeBox.style.left = navL.offsetLeft + 'px'
+                activeBox.style.width = navL.offsetWidth + 'px'
+                activeBox.style.height = navL.offsetHeight + 'px'
+            }
+        }
+
+        setTimeout(() => {
+            navItem.forEach((item) => {
+                if (item.getAttribute('href') === '#home') {
+                    initNav(item)
+                } else {
+                    item.style.display = 'grid'
+                }
+            })
+
+            navBtns.forEach((item) => {
+                item.style.display = 'flex'
+            })
+
+            landItems.forEach((item) => {
+                item.style.display = 'flex'
+            })
+
+            ScrollTrigger.refresh()
+
+            if (introNamePage) {
+                introNamePage.style.opacity = 0
+                window.scroll(0, 0)
+
+                setTimeout(() => {
+                    introNamePage.style.display = 'none'
+                }, 300)
+            }
+        }, 3850)
     }, [intro])
 
     return (
