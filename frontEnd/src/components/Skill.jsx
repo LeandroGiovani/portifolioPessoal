@@ -15,85 +15,129 @@
 import SkillCard from "./SkillCard";
 import htmlL from "../assets/img/html5.svg";
 import cssL from "../assets/img/css3.svg";
-import reactL from "../assets/img/react.svg";
-import pythonL from "../assets/img/python.svg";
 import jsL from "../assets/img/javascript.svg";
+import reactL from "../assets/img/react.svg";
 import nodejsL from "../assets/img/nodejs.svg";
 import expressjsL from "../assets/img/expressjs.svg";
+import pythonL from "../assets/img/python.svg";
+import fastapiL from "../assets/img/fastapi.svg";
+import flaskL from "../assets/img/flask.svg";
+import phpL from "../assets/img/php.svg";
 import mongodbL from "../assets/img/mongodb.svg";
 import mysqlL from "../assets/img/mysql.svg";
 import postgresqlL from "../assets/img/postgresql.svg";
-import phpL from "../assets/img/php.svg";
-import bootstrapL from "../assets/img/bootstrap.svg";
 import tailwindcssL from "../assets/img/tailwindcss.svg";
+import bootstrapL from "../assets/img/bootstrap.svg";
+import gitL from "../assets/img/git.svg";
+import dockerL from "../assets/img/docker.svg";
+import awsL from "../assets/img/aws.svg";
 
 const Skill = () => {
   const skillItem = [
+    // Frontend
     {
       imgSrc: htmlL,
-      label: 'HTML',
-      desc: 'Estrutura de Interface'
+      label: "HTML",
+      desc: "Markup Language"
     },
     {
       imgSrc: cssL,
-      label: 'CSS',
-      desc: 'Estilização de Interface'
-    },
-    {
-      imgSrc: reactL,
-      label: 'React',
-      desc: 'Framework'
-    },
-    {
-        imgSrc: pythonL,
-        label: 'Python',
-        desc: 'Linguagem Versátil'
+      label: "CSS",
+      desc: "Interface Styling"
     },
     {
       imgSrc: jsL,
-      label: 'JavaScript',
-      desc: 'Interatividade Web'
+      label: "JavaScript",
+      desc: "Web Programming Language"
     },
     {
+      imgSrc: reactL,
+      label: "React",
+      desc: "Frontend Library"
+    },
+    {
+      imgSrc: reactL,
+      label: "React Native",
+      desc: "Mobile Development"
+    },
+
+    // Backend
+    {
       imgSrc: nodejsL,
-      label: 'NodeJS',
-      desc: 'Web Server'
+      label: "Node.js",
+      desc: "JavaScript Runtime"
     },
     {
       imgSrc: expressjsL,
-      label: 'ExpressJS',
-      desc: 'Node Framework'
+      label: "Express.js",
+      desc: "Backend Framework"
     },
     {
+      imgSrc: pythonL,
+      label: "Python",
+      desc: "General Purpose Language"
+    },
+    {
+      imgSrc: fastapiL,
+      label: "FastAPI",
+      desc: "API Framework"
+    },
+    {
+      imgSrc: flaskL,
+      label: "Flask",
+      desc: "Python Web Framework"
+    },
+    {
+      imgSrc: phpL,
+      label: "PHP",
+      desc: "Backend Language"
+    },
+
+    // Databases
+    {
       imgSrc: mongodbL,
-      label: 'MongoDB',
-      desc: 'Banco de Dados'
+      label: "MongoDB",
+      desc: "NoSQL Database"
     },
     {
       imgSrc: mysqlL,
       label: "MySQL",
-      desc: "Banco de Dados"
+      desc: "Relational Database"
     },
     {
       imgSrc: postgresqlL,
       label: "PostgreSQL",
-      desc: "Banco de Dados"
+      desc: "Relational Database"
     },
+
+    // Styling / UI
     {
-      imgSrc: phpL,
-      label: "Php",
-      desc: "Linguagem de Backend"
+      imgSrc: tailwindcssL,
+      label: "TailwindCSS",
+      desc: "CSS Framework"
     },
     {
       imgSrc: bootstrapL,
       label: "Bootstrap",
-      desc: "Framework de Estilização"
+      desc: "CSS Framework"
+    },
+
+    // Tools / DevOps
+    {
+      imgSrc: gitL,
+      label: "Git",
+      desc: "Version Control"
     },
     {
-      imgSrc: tailwindcssL,
-      label: 'TailwindCSS',
-      desc: 'Framework de Estilização'
+      imgSrc: dockerL,
+      label: "Docker",
+      desc: "Containerization"
     },
+    {
+      imgSrc: awsL,
+      label: "AWS",
+      desc: "Cloud Platform"
+    }
   ];
 
   return (
