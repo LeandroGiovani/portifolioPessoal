@@ -84,10 +84,12 @@ const ContactForm = () => {
                 <input 
                     required
                     type="text" 
+                    id="name"
                     name="name" 
                     placeholder="Seu nome"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    autoComplete="off"
                     className="text-field reveal-up"
                 />
             </div>
@@ -103,10 +105,12 @@ const ContactForm = () => {
                 <input 
                     required
                     type="email" 
+                    id="email"
                     name="email" 
                     placeholder="seuemail@exemplo.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="off"
                     className="text-field reveal-up"
                 />
             </div>
@@ -122,10 +126,12 @@ const ContactForm = () => {
 
             <textarea 
                 required
-                name="message" 
+                id="message"
+                name="message"
                 placeholder="Olá!"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                autoComplete="off"
                 className="text-field resize-y min-h-32 max-h-80 reveal-up"
             >
 

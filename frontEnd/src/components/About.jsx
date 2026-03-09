@@ -29,7 +29,7 @@ const About = () => {
   return (
     <section className="section" id="about">
         <div className="container">
-            <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 flex-col revealLandPage4 hidd">
+            <div className="bg-zinc-900 border-glow p-7 md:p-12 flex-col revealLandPage4 hidd">
                 <p className="text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[70ch] text-justify">
                 Olá! Meu nome é Leandro Giovani. Sou estudante de Sistemas de Informação na UNIFEB e técnico em Análise e Desenvolvimento de Sistemas pelo SENAI.
 

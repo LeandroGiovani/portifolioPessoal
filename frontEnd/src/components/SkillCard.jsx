@@ -14,12 +14,12 @@
 
 const SkillCard = ({ imgSrc, label, desc, classes }) => {
   return (
-    <div className={"flex items-center gap-3 ring-2 ring-inset ring-zinc-50/10 rounded-2xl p-3 hover:bg-zinc-800 group transition-colors duration-300 " + classes}>
+    <div className={"flex items-center gap-4 border-glow p-3 hover:bg-zinc-800 hover:ring-zinc-700 hover:cursor-context-menu group transition-all duration-300 " + classes}>
         <figure className="bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900 transition-colors duration-300">
             <img 
                 src={imgSrc}
                 width={32}
-                height={32}
+                height={32} 
                 alt={label}
                 className="" 
             />
@@ -28,7 +28,7 @@ const SkillCard = ({ imgSrc, label, desc, classes }) => {
         <div>
             <h3>{label}</h3>
 
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-sm font-semibold">
                 {desc}
             </p>
         </div>

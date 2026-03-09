@@ -38,7 +38,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
+    <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40">
       <div className="max-w-screen-2xl w-full flex justify-between items-center min-[920px]:grid min-[920px]:grid-cols-[1fr_3fr_1fr] max-2xl:!px-6">
 
         <h1>
@@ -74,7 +74,7 @@ const Header = () => {
               key={key}
               href={href}
               target='_blank'
-              className="w-12 h-12 flex items-center justify-center ring-inset ring-2 ring-zinc-50/5 text-zinc-50/50 rounded-lg hover:bg-zinc-50/20 active:bg-zinc-50/40 transition-colors duration-300"
+              className="w-12 h-12 flex items-center justify-center bg-zinc-900 border-glow text-zinc-400 rounded-lg hover:bg-zinc-800 hover:ring-zinc-700 active:bg-zinc-900 transition-colors duration-300"
             >
               {icon}
             </a>

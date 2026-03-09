@@ -66,9 +66,9 @@ const LandPage = () => {
 
           <div className="flex items-center gap-3 revealLandPage3 hidd">
             <BtnPrimary 
+              href={DownloadCV}
               label="Baixar Currículo"
               icon="download"
-              href={DownloadCV}
             />
 
             <BtnSecondary 

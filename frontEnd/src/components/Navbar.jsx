@@ -62,7 +62,7 @@ const Navbar = ({ navOpen }) => {
   }
   
   return (
-    <nav className={'navbar ' + (navOpen ? 'active' : '')}>
+    <nav className={'border-glow navbar transition-all duration-300 ' + (navOpen ? 'active' : '')}>
       {navItems.map(({ label, link, className, ref }, key) => (
         label === 'GitHub' || label === 'LinkedIn' ? (
           <a 
@@ -72,7 +72,7 @@ const Navbar = ({ navOpen }) => {
             ref={ref}
             className={className}
           >
-            <div className="flex items-center justify-between hover:text-zinc-50 transition-colors">
+            <div className="flex items-center justify-between hover:text-zinc-50">
               {label}
               <div className="material-symbols-rounded text-[20px]">
                 arrow_outward

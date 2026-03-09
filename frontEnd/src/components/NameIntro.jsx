@@ -92,7 +92,7 @@ const NameIntro = () => {
 
     return (
         <section className="name__intro">
-            <div className="div_loader flex items-center justify-center h-screen bg-zinc-900 z-60">
+            <div className="div_loader flex items-center justify-center h-screen bg-zinc-950 z-60">
                 <div className="loader relative flex items-center justify-center w-full max-w-24 mt-12 mb-12"></div>
             </div>
             <svg viewBox="0 0 608 188" fill="none" xmlns="http://www.w3.org/2000/svg" id="name">
