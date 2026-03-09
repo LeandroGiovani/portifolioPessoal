@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40">
-      <div className="max-w-screen-2xl w-full flex justify-between items-center min-[920px]:grid min-[920px]:grid-cols-[1fr_3fr_1fr] max-2xl:!px-6">
+      <div className="max-w-screen-2xl w-full flex justify-between items-center header-grid max-2xl:!px-6">
 
         <AnimateIn delay={300}>
           <h1>

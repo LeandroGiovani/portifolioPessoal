@@ -142,6 +142,13 @@ body{
   @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-900 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] !duration-200 min-[920px]:static min-[920px]:flex min-[920px]:items-center min-[920px]:mt-0 min-[920px]:opacity-100 min-[920px]:blur-[0] min-[920px]:visible min-[920px]:scale-100 backdrop-blur-2xl  overflow-hidden
 }
 
+@media (width >= 920px) {
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
+}
+
 .navbar.active{
   @apply opacity-100 scale-100 blur-[0] visible
 }
