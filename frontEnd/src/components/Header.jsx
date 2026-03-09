@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from "./AnimateIn";
 import logo from '../assets/img/logoLW.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -41,16 +42,18 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40">
       <div className="max-w-screen-2xl w-full flex justify-between items-center min-[920px]:grid min-[920px]:grid-cols-[1fr_3fr_1fr] max-2xl:!px-6">
 
-        <h1>
-          <Link to="/" className="logo revealNav9">
-            <img 
-              src={logo} 
-              width={50} 
-              height={50} 
-              alt="Leandro Giovani logo" 
-            />
-          </Link>
-        </h1>
+        <AnimateIn delay={300}>
+          <h1>
+            <Link to="/" className="logo revealNav9">
+              <img 
+                src={logo} 
+                width={50} 
+                height={50} 
+                alt="Leandro Giovani logo" 
+              />
+            </Link>
+          </h1>
+        </AnimateIn>
 
         <div className="relative min-[920px]:justify-self-center">
           <button

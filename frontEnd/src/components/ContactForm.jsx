@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from './AnimateIn'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import axios from 'axios'
@@ -73,77 +74,85 @@ const ContactForm = () => {
     >
 
         <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
-            <div className="mb-4">
-                <label 
-                    htmlFor="name"
-                    className="label reveal-up"
-                >
-                    Nome
-                </label>
+            <AnimateIn delay={300}>
+                <div className="mb-4">
+                    <label 
+                        htmlFor="name"
+                        className="label reveal-up"
+                    >
+                        Nome
+                    </label>
 
-                <input 
-                    required
-                    type="text" 
-                    id="name"
-                    name="name" 
-                    placeholder="Seu nome"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    autoComplete="off"
-                    className="text-field reveal-up"
-                />
-            </div>
+                    <input 
+                        required
+                        type="text" 
+                        id="name"
+                        name="name" 
+                        placeholder="Seu nome"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        autoComplete="off"
+                        className="text-field reveal-up"
+                    />
+                </div>
+            </AnimateIn>
 
-            <div className="mb-4">
-                <label 
-                    htmlFor="email"
-                    className="label reveal-up"
-                >
-                    Email
-                </label>
+            <AnimateIn delay={300}>
+                <div className="mb-4">
+                    <label 
+                        htmlFor="email"
+                        className="label reveal-up"
+                    >
+                        Email
+                    </label>
 
-                <input 
-                    required
-                    type="email" 
-                    id="email"
-                    name="email" 
-                    placeholder="seuemail@exemplo.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    autoComplete="off"
-                    className="text-field reveal-up"
-                />
-            </div>
+                    <input 
+                        required
+                        type="email" 
+                        id="email"
+                        name="email" 
+                        placeholder="seuemail@exemplo.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        autoComplete="off"
+                        className="text-field reveal-up"
+                    />
+                </div>
+            </AnimateIn>
         </div>
 
-        <div className="mb-4">
-            <label 
-                htmlFor="message" 
-                className="label reveal-up"
+        <AnimateIn delay={400}>
+            <div className="mb-4">
+                <label 
+                    htmlFor="message" 
+                    className="label reveal-up"
+                >
+                    Message
+                </label>
+
+                <textarea 
+                    required
+                    id="message"
+                    name="message"
+                    placeholder="Olá!"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    autoComplete="off"
+                    className="text-field resize-y min-h-32 max-h-80 reveal-up"
+                >
+
+                </textarea>
+            </div>
+        </AnimateIn>
+
+        <AnimateIn delay={500}>
+            <button 
+                type="submit" 
+                className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer reveal-up"
             >
-                Message
-            </label>
-
-            <textarea 
-                required
-                id="message"
-                name="message"
-                placeholder="Olá!"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                autoComplete="off"
-                className="text-field resize-y min-h-32 max-h-80 reveal-up"
-            >
-
-            </textarea>
-        </div>
-
-        <button 
-            type="submit" 
-            className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer reveal-up"
-        >
-            Enviar
-        </button>
+                Enviar
+            </button>
+        </AnimateIn>
 
     </form>
   )

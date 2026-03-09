@@ -22,33 +22,33 @@ const Navbar = ({ navOpen }) => {
     {
       label: 'Página Inicial',
       link: '#home',
-      className: 'nav-link active revealNav6 hid',
+      className: 'nav-link active',
       ref: lastActiveLink
     },
     {
       label: 'Sobre',
       link: '#about',
-      className: 'nav-link revealNav3 hid'
+      className: 'nav-link'
     },
     {
       label: 'Experiência',
       link: '#experience',
-      className: 'nav-link revealNav hid'
+      className: 'nav-link'
     },
     {
       label: 'Tecnologias',
       link: '#skills',
-      className: 'nav-link revealNav hid'
+      className: 'nav-link'
     },
     {
       label: 'Projetos',
       link: '#projects',
-      className: 'nav-link revealNav3 hid'
+      className: 'nav-link'
     },
     {
       label: 'Contate-me',
       link: '#contact',
-      className: 'nav-link revealNav6 hid'
+      className: 'nav-link'
     },
     {
       label: 'GitHub',

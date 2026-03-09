@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from './AnimateIn'
 import ProjectCard from './ProjectCard'
 import project1 from "../assets/img/project1.png"
 import project2 from "../assets/img/project2.png"
@@ -41,26 +42,29 @@ const Projects = () => {
 
   return (
     <section className="section" id="projects">
-        <div className="container">
+      <div className="container">
 
-            <h2 className="projects-title mb-8 reveal-up">
-                Destaques do meu portifólio
-            </h2>
+        <AnimateIn delay={300}>
+          <h2 className="projects-title mb-8 reveal-up">
+            Destaques do meu portifólio
+          </h2>
+        </AnimateIn>
 
-            <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-                {projects.map(({ imgSrc, title, tags, projectLink }, key) => (
-                    <ProjectCard
-                        key={key}
-                        imgSrc={imgSrc}
-                        title={title}
-                        tags={tags}
-                        projectLink={projectLink}
-                        classes="reveal-up"
-                    />
-                ))}
-            </div>
-
+        <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
+          {projects.map(({ imgSrc, title, tags, projectLink }, key) => (
+            <AnimateIn key={key} delay={key * 100}>
+              <ProjectCard
+                key={key}
+                imgSrc={imgSrc}
+                title={title}
+                tags={tags}
+                projectLink={projectLink}
+              />
+            </AnimateIn>
+          ))}
         </div>
+
+      </div>
     </section>
   )
 }

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from "./AnimateIn";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
@@ -45,24 +46,28 @@ const Contact = () => {
 
             <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
 
-                <h2 className="contact-title lg:max-w-[12ch] reveal-up">
+                <AnimateIn delay={300}>
+                    <h2 className="contact-title lg:max-w-[12ch] reveal-up">
                     Entre em contato comigo
-                </h2>
+                    </h2>
 
-                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] text-justify lg:max-w-[30ch] reveal-up">
-                    Se você tem um projeto em mente, deseja colaborar ou simplesmente quer trocar ideias, estou à disposição! Entre em contato pelo formulário abaixo ou através das minhas redes sociais.
-                </p>
-
+                    <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] text-justify lg:max-w-[30ch] reveal-up">
+                        Se você tem um projeto em mente, deseja colaborar ou simplesmente quer trocar ideias, estou à disposição! Entre em contato pelo formulário abaixo ou através das minhas redes sociais.
+                    </p>
+                </AnimateIn>
+                
                 <div className="flex items-center gap-2 mt-auto">
                     {socialLinks.map(({ href, icon, alt }, key) => (
-                        <a 
-                            key={key}
-                            href={href}
-                            target="_blank"
-                            className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 transition-colors duration-300 reveal-up"
-                        >
-                            {icon}
-                        </a>
+                        <AnimateIn key={key} delay={key * 100}>
+                            <a 
+                                key={key}
+                                href={href}
+                                target="_blank"
+                                className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 transition-colors duration-300 reveal-up"
+                            >
+                                {icon}
+                            </a>
+                        </AnimateIn>
                     ))}
                 </div>
 

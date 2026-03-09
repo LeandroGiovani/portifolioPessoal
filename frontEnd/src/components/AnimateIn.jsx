@@ -21,7 +21,7 @@ const AnimateIn = ({ children, delay = 0, className = "" }) => {
     <div
       ref={ref}
       className={`${className} transition-all duration-700 ease-out ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        visible ? "opacity-100 translate-y-0 blur-none" : "opacity-0 translate-y-14 blur-[2px]"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >

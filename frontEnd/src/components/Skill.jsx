@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from "./AnimateIn";
 import SkillCard from "./SkillCard";
 import htmlL from "../assets/img/html5.svg";
 import cssL from "../assets/img/css3.svg";
@@ -144,24 +145,27 @@ const Skill = () => {
     <section className="section" id="skills">
         <div className="container">
 
-          <h2 className="skills-title reveal-up">
-              Principais Tecnologias que Utilizo
-          </h2>
+          <AnimateIn delay={300}>
+            <h2 className="skills-title reveal-up">
+                Principais Tecnologias que Utilizo
+            </h2>
 
-          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-              Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
-          </p>
+            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+                Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
+            </p>
+          </AnimateIn>
 
           <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
               {
                   skillItem.map(({ imgSrc, label, desc }, key) => (
-                      <SkillCard 
+                      <AnimateIn key={key} delay={key * 30}>
+                        <SkillCard 
                           key={key}
                           imgSrc={imgSrc}
                           label={label}
                           desc={desc}
-                          classes="reveal-up"
-                      />
+                        />
+                      </AnimateIn>
                   ))
               }
           </div>

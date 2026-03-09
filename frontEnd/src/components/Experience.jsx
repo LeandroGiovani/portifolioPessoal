@@ -25,14 +25,14 @@ const experiences = [
 const Experience = () => (
   <section id="experience" className="section">
     <div className="container">
-      <AnimateIn>
+      <AnimateIn delay={300}>
         <h2 className="projects-title mb-8">Experiência Profissional</h2>
       </AnimateIn>
       <div className="relative mt-16">
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800 hidden md:block" />
         <div className="space-y-12">
           {experiences.map(({ role, company, companyLogo, period, description, tags }, i) => (
-            <AnimateIn key={i} delay={i * 150}>
+            <AnimateIn key={i} delay={i * 200}>
               <ExperienceCard
                 role={role}
                 company={company}

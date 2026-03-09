@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { BtnPrimary } from "./Buttons";
+import AnimateIn from './AnimateIn';
 import { Link } from 'react-router-dom'
 import logo from "../assets/img/logoLW.png"
 
@@ -63,73 +63,87 @@ const Footer = () => {
     <footer className="sectionF border-t-1 border-zinc-50/5">
         <div className="container">
 
-          <div className="lg:grid grid-cols-2">
+            <div className="lg:grid grid-cols-2">
 
-            <div className="mb-10">
-                <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10 reveal-up">
-                    Obrigado por visitar!
-                </h2>
-            </div>
+                <AnimateIn delay={300}>
+                    <div className="mb-10">
+                        <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10 reveal-up">
+                            Obrigado por visitar!
+                        </h2>
+                    </div>
+                </AnimateIn>
 
-            <div className="grid grid-cols-2 gap-4 lg:pl-20">
+                <div className="grid grid-cols-2 gap-4 lg:pl-20">
 
-                <div>
-                    <p className="mb-2 reveal-up">Mapa do site</p>
+                    <div>
+                        <AnimateIn delay={300}>
+                            <p className="mb-2 reveal-up">Mapa do site</p>
+                        </AnimateIn>
 
-                    <ul>
-                        {sitemap.map(({ label, href }, key) => (
-                            <li key={key}>
-                                <a 
-                                    href={href}
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
-                                    onClick={scrollTop}
-                                >
-                                    {label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+                        <ul>
+                            {sitemap.map(({ label, href }, key) => (
+                                <AnimateIn key={key} delay={key * 100}>
+                                    <li key={key}>
+                                        <a 
+                                            href={href}
+                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
+                                            onClick={scrollTop}
+                                        >
+                                            {label}
+                                        </a>
+                                    </li>
+                                </AnimateIn>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <AnimateIn delay={300}>
+                            <p className="mb-2 reveal-up">Redes sociais</p>
+                        </AnimateIn>
+
+                        <ul>
+                            {socials.map(({ label, href }, key) => (
+                                <AnimateIn key={key} delay={key * 100}>
+                                    <li key={key}>
+                                        <a 
+                                            href={href}
+                                            target="_blank"
+                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
+                                        >
+                                            {label}
+                                        </a>
+                                    </li>
+                                </AnimateIn>
+                            ))}
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div>
-                    <p className="mb-2 reveal-up">Redes sociais</p>
-
-                    <ul>
-                        {socials.map(({ label, href }, key) => (
-                            <li key={key}>
-                                <a 
-                                    href={href}
-                                    target="_blank"
-                                    className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
-                                >
-                                    {label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
             </div>
 
-          </div>
+            <div className="flex items-center justify-between pt-10 mb-26">
+                <AnimateIn delay={300}>
+                    <Link 
+                        to="/" 
+                        className="logo reveal-up"
+                    >
+                        <img 
+                            src={logo}
+                            width={40}
+                            height={40}
+                            alt="Logo" 
+                        />
+                    </Link>
+                </AnimateIn>
 
-          <div className="flex items-center justify-between pt-10 mb-26">
-            <Link 
-                to="/" 
-                className="logo reveal-up"
-            >
-                <img 
-                    src={logo}
-                    width={40}
-                    height={40}
-                    alt="Logo" 
-                />
-            </Link>
-
-            <p className="text-zinc-500 text-sm reveal-up">
-                &copy; 2026 <span className="text-zinc-200">Leandro Giovani</span>
-            </p>
-          </div>
+                <AnimateIn delay={300}>
+                    <p className="text-zinc-500 text-sm reveal-up">
+                        &copy; 2026 <span className="text-zinc-200">Leandro Giovani</span>
+                    </p>
+                </AnimateIn>
+            </div>
 
         </div>
     </footer>

@@ -50,7 +50,7 @@ const LandPage = () => {
                 sequence={[
                   'Desenvolvedor Full Stack',
                   1000,
-                  'Apaixonado por inovação',
+                  'Apaixonado por tecnologia',
                   1000,
                   'Leandro Giovani',
                   1000,
