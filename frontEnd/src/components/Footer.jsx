@@ -46,7 +46,7 @@ const socials = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/'
+    href: 'https://www.linkedin.com/in/leandrogiovani/'
   },
   {
     label: 'Instagram',

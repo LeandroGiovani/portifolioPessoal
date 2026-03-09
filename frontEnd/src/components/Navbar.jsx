@@ -52,7 +52,7 @@ const Navbar = ({ navOpen }) => {
     },
     {
       label: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/',
+      link: 'https://www.linkedin.com/in/leandrogiovani/',
       className: 'nav-link min-[920px]:!hidden'
     },
   ];
