@@ -146,11 +146,11 @@ const Skill = () => {
         <div className="container">
 
           <AnimateIn delay={300}>
-            <h2 className="skills-title reveal-up">
+            <h2 className="skills-title">
                 Principais Tecnologias que Utilizo
             </h2>
 
-            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
                 Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
             </p>
           </AnimateIn>

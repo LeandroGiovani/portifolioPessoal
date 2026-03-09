@@ -78,7 +78,7 @@ const ContactForm = () => {
                 <div className="mb-4">
                     <label 
                         htmlFor="name"
-                        className="label reveal-up"
+                        className="label"
                     >
                         Nome
                     </label>
@@ -92,7 +92,7 @@ const ContactForm = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         autoComplete="off"
-                        className="text-field reveal-up"
+                        className="text-field"
                     />
                 </div>
             </AnimateIn>
@@ -101,7 +101,7 @@ const ContactForm = () => {
                 <div className="mb-4">
                     <label 
                         htmlFor="email"
-                        className="label reveal-up"
+                        className="label"
                     >
                         Email
                     </label>
@@ -115,7 +115,7 @@ const ContactForm = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         autoComplete="off"
-                        className="text-field reveal-up"
+                        className="text-field"
                     />
                 </div>
             </AnimateIn>
@@ -125,7 +125,7 @@ const ContactForm = () => {
             <div className="mb-4">
                 <label 
                     htmlFor="message" 
-                    className="label reveal-up"
+                    className="label"
                 >
                     Message
                 </label>
@@ -138,7 +138,7 @@ const ContactForm = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     autoComplete="off"
-                    className="text-field resize-y min-h-32 max-h-80 reveal-up"
+                    className="text-field resize-y min-h-32 max-h-80"
                 >
 
                 </textarea>
@@ -148,7 +148,7 @@ const ContactForm = () => {
         <AnimateIn delay={500}>
             <button 
                 type="submit" 
-                className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer reveal-up"
+                className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer"
             >
                 Enviar
             </button>

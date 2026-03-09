@@ -44,7 +44,7 @@ const Header = () => {
 
         <AnimateIn delay={300}>
           <h1>
-            <Link to="/" className="logo revealNav9">
+            <Link to="/" className="logo">
               <img 
                 src={logo} 
                 width={50} 
@@ -70,7 +70,7 @@ const Header = () => {
 
         <div 
           href="#contact" 
-          className="flex items-center gap-3 max-[920px]:!hidden min-[920px]:justify-self-end revealNav9"
+          className="flex items-center gap-3 max-[920px]:!hidden min-[920px]:justify-self-end"
         >
           {socialLinks.map(({ icon, href, alt }, key) => (
             <a

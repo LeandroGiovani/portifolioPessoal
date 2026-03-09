@@ -45,7 +45,7 @@ const Projects = () => {
       <div className="container">
 
         <AnimateIn delay={300}>
-          <h2 className="projects-title mb-8 reveal-up">
+          <h2 className="projects-title mb-8">
             Destaques do meu portifólio
           </h2>
         </AnimateIn>

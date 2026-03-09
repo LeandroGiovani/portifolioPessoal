@@ -67,7 +67,7 @@ const Footer = () => {
 
                 <AnimateIn delay={300}>
                     <div className="mb-10">
-                        <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10 reveal-up">
+                        <h2 className="footer-title text-5xl leading-tight font-semibold mt-5 mb-8 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[12ch] lg:text-[55px] lg:mb-10">
                             Obrigado por visitar!
                         </h2>
                     </div>
@@ -77,7 +77,7 @@ const Footer = () => {
 
                     <div>
                         <AnimateIn delay={300}>
-                            <p className="mb-2 reveal-up">Mapa do site</p>
+                            <p className="mb-2">Mapa do site</p>
                         </AnimateIn>
 
                         <ul>
@@ -86,7 +86,7 @@ const Footer = () => {
                                     <li key={key}>
                                         <a 
                                             href={href}
-                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
+                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300"
                                             onClick={scrollTop}
                                         >
                                             {label}
@@ -99,7 +99,7 @@ const Footer = () => {
 
                     <div>
                         <AnimateIn delay={300}>
-                            <p className="mb-2 reveal-up">Redes sociais</p>
+                            <p className="mb-2">Redes sociais</p>
                         </AnimateIn>
 
                         <ul>
@@ -109,7 +109,7 @@ const Footer = () => {
                                         <a 
                                             href={href}
                                             target="_blank"
-                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300 reveal-up"
+                                            className="block text-sm text-zinc-400 py-1 hover:text-zinc-200 transition-colors duration-300"
                                         >
                                             {label}
                                         </a>
@@ -127,7 +127,7 @@ const Footer = () => {
                 <AnimateIn delay={300}>
                     <Link 
                         to="/" 
-                        className="logo reveal-up"
+                        className="logo"
                     >
                         <img 
                             src={logo}
@@ -139,7 +139,7 @@ const Footer = () => {
                 </AnimateIn>
 
                 <AnimateIn delay={300}>
-                    <p className="text-zinc-500 text-sm reveal-up">
+                    <p className="text-zinc-500 text-sm">
                         &copy; 2026 <span className="text-zinc-200">Leandro Giovani</span>
                     </p>
                 </AnimateIn>
