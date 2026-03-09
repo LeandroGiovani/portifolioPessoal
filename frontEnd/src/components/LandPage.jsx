@@ -75,6 +75,7 @@ const LandPage = () => {
               href="#about"
               label="Sobre mim"
               icon="arrow_downward"
+              classes="border-glow"
             />
           </div>
         </div>

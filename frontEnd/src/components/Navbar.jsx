@@ -31,6 +31,11 @@ const Navbar = ({ navOpen }) => {
       className: 'nav-link revealNav3 hid'
     },
     {
+      label: 'Experiência',
+      link: '#experience',
+      className: 'nav-link revealNav hid'
+    },
+    {
       label: 'Tecnologias',
       link: '#skills',
       className: 'nav-link revealNav hid'
