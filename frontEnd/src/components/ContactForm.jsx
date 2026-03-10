@@ -26,40 +26,37 @@ const ContactForm = () => {
     const [message, setMessage] = useState('')
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        
+        e.preventDefault();
 
-        const serviceId = 'service_djwfdof'
-        const templateId = 'template_g4nk4qg'
-        const publicKey = 'BeP_E7EMCzvlzf8oL'
+        const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+        });
 
-        const data = {
-            service_id: serviceId,
-            template_id: templateId,
-            user_id: publicKey,
-            template_params: {
-                from_name: name,
-                from_email: email,
-                to_name: 'Leandro',
-                message: message,
-            }
+        if (!res.ok) {
+        throw new Error("Erro no servidor");
         }
 
-        try{
-            const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
-            console.log(res.data)
-            setName('')
-            setEmail('')
-            setMessage('')
+        const data = await res.json();
+
+        if (data.success) {
             successDiv.classList.add('cardShow')
             setTimeout(() => {
                 successDiv.classList.remove('cardShow')
-            }, 2600)
-        } catch (error){
-            console.error(error)
+            }, 3000);
+            setName('')
+            setEmail('')
+            setMessage('')
+            document.querySelectorAll('form input, form textarea').forEach(input => input.value = '')
+        } else {
             errorDiv.classList.add('cardShow')
             setTimeout(() => {
                 errorDiv.classList.remove('cardShow')
-            }, 2600)
+            }, 3000);
         }
 
     }
