@@ -1,32 +1,37 @@
-// Copyright 2025 LeandroGiovani
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//     http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 import { useState, useEffect } from 'react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const NameIntro = () => {
     const strokeW = 3
     const [intro, setIntro] = useState(false)
 
+    const disableScroll = () => {
+        document.documentElement.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden'
+        document.body.style.position = 'fixed'
+        document.body.style.left = '0'
+        document.body.style.top = '0'
+        document.body.style.width = '100%'
+    }
+
+    const enableScroll = () => {
+        document.documentElement.style.overflow = ''
+        document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.left = ''
+        document.body.style.width = ''
+    }
+
     useEffect(() => {
         const handleLoad = () => {
             const loaderDiv = document.querySelector('.div_loader')
             if (loaderDiv) loaderDiv.remove()
+
+            disableScroll()
+            window.scrollTo(0, 0)
             setIntro(true)
         }
 
-        // Garante que o handleLoad seja executado mesmo se o evento 'load' não disparar
         if (document.readyState === 'complete') {
             handleLoad()
         } else {
@@ -35,6 +40,7 @@ const NameIntro = () => {
 
         return () => {
             window.removeEventListener('load', handleLoad)
+            enableScroll()
         }
     }, [])
 
@@ -50,6 +56,7 @@ const NameIntro = () => {
 
         const initNav = (navL) => {
             navL.style.display = 'grid'
+
             if (activeBox) {
                 activeBox.style.top = navL.offsetTop + 'px'
                 activeBox.style.left = navL.offsetLeft + 'px'
@@ -58,7 +65,7 @@ const NameIntro = () => {
             }
         }
 
-        setTimeout(() => {
+        const introTimeout = setTimeout(() => {
             navItem.forEach((item) => {
                 if (item.getAttribute('href') === '#home') {
                     initNav(item)
@@ -68,14 +75,23 @@ const NameIntro = () => {
             })
 
             if (introNamePage) {
-                introNamePage.style.opacity = 0
-                window.scroll(0, 0)
+                introNamePage.style.opacity = '0'
 
-                setTimeout(() => {
+                const hideTimeout = setTimeout(() => {
                     introNamePage.style.display = 'none'
+                    enableScroll()
+                    ScrollTrigger.refresh()
                 }, 300)
+
+                return () => clearTimeout(hideTimeout)
+            } else {
+                enableScroll()
             }
         }, 3850)
+
+        return () => {
+            clearTimeout(introTimeout)
+        }
     }, [intro])
 
     return (
@@ -83,6 +99,7 @@ const NameIntro = () => {
             <div className="div_loader flex items-center justify-center h-screen bg-zinc-950 z-60">
                 <div className="loader relative flex items-center justify-center w-full max-w-24 mt-12 mb-12"></div>
             </div>
+
             <svg viewBox="0 0 608 188" fill="none" xmlns="http://www.w3.org/2000/svg" id="name">
                 <path d="M566.473 171.2H575.273V184H536.073V171.2H544.873H546.873V169.2V118.8V116.8H544.873H536.073V104H575.273V116.8H566.473H564.473V118.8V169.2V171.2H566.473Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
                 <path d="M463.616 135.6V184H446.016V104H465.656L493.88 153.392L497.616 159.931V152.4V104H515.216V184H495.577L467.353 134.608L463.616 128.069V135.6Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
@@ -98,9 +115,8 @@ const NameIntro = () => {
                 <path d="M214.861 70.3226L214.385 69H212.979H182.979H181.573L181.097 70.3226L176.173 84H157.075L187.36 4H208.598L238.883 84H219.785L214.861 70.3226ZM186.486 54.7555L185.585 57.4H188.379H207.579H210.372L209.472 54.7555L199.872 26.5555L197.979 20.9939L196.086 26.5555L186.486 54.7555Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
                 <path d="M102.007 71.2H145.007V84H82.407V4H145.007V16.8H102.007H100.007V18.8V35V37H102.007H135.407V49.8H102.007H100.007V51.8V69.2V71.2H102.007Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
                 <path d="M20.1789 69.2V71.2H22.1789H63.9789V84H2.57892V4H20.1789V69.2Z" stroke="#F2F2F2" strokeWidth={strokeW}/>
-            </svg> 
+            </svg>
         </section>
-        
     )
 }
 
