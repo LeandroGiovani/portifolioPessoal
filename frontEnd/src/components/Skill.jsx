@@ -49,7 +49,7 @@ const Skill = () => {
     {
       imgSrc: jsL,
       label: "JavaScript",
-      desc: "Web Programming Language"
+      desc: "Web Development"
     },
     {
       imgSrc: reactL,
@@ -147,7 +147,7 @@ const Skill = () => {
 
           <AnimateIn delay={300}>
             <h2 className="skills-title">
-                Principais Tecnologias que Utilizo
+                Principais Tecnologias
             </h2>
 
             <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
