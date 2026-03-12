@@ -13,7 +13,9 @@
   "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
     "express": "^4.21.2",
+    "nodemailer": "^8.0.2",
     "portifolio": "file:.."
   }
 }

@@ -50,7 +50,7 @@ const LandPage = () => {
                 sequence={[
                   'Desenvolvedor Full Stack',
                   1000,
-                  'Apaixonado por inovação',
+                  'Apaixonado por tecnologia',
                   1000,
                   'Leandro Giovani',
                   1000,
@@ -66,15 +66,16 @@ const LandPage = () => {
 
           <div className="flex items-center gap-3 revealLandPage3 hidd">
             <BtnPrimary 
+              href={DownloadCV}
               label="Baixar Currículo"
               icon="download"
-              href={DownloadCV}
             />
 
             <BtnSecondary 
               href="#about"
               label="Sobre mim"
               icon="arrow_downward"
+              classes="border-glow"
             />
           </div>
         </div>

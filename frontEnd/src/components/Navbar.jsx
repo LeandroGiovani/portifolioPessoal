@@ -22,28 +22,33 @@ const Navbar = ({ navOpen }) => {
     {
       label: 'Página Inicial',
       link: '#home',
-      className: 'nav-link active revealNav6 hid',
+      className: 'nav-link active',
       ref: lastActiveLink
     },
     {
       label: 'Sobre',
       link: '#about',
-      className: 'nav-link revealNav3 hid'
+      className: 'nav-link'
+    },
+    {
+      label: 'Experiência',
+      link: '#experience',
+      className: 'nav-link'
     },
     {
       label: 'Tecnologias',
       link: '#skills',
-      className: 'nav-link revealNav hid'
+      className: 'nav-link'
     },
     {
       label: 'Projetos',
       link: '#projects',
-      className: 'nav-link revealNav3 hid'
+      className: 'nav-link'
     },
     {
       label: 'Contate-me',
       link: '#contact',
-      className: 'nav-link revealNav6 hid'
+      className: 'nav-link'
     },
     {
       label: 'GitHub',
@@ -52,7 +57,7 @@ const Navbar = ({ navOpen }) => {
     },
     {
       label: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/',
+      link: 'https://www.linkedin.com/in/leandrogiovani/',
       className: 'nav-link min-[920px]:!hidden'
     },
   ];
@@ -62,7 +67,7 @@ const Navbar = ({ navOpen }) => {
   }
   
   return (
-    <nav className={'navbar ' + (navOpen ? 'active' : '')}>
+    <nav className={'border-glow navbar transition-all duration-300 ' + (navOpen ? 'active' : '')}>
       {navItems.map(({ label, link, className, ref }, key) => (
         label === 'GitHub' || label === 'LinkedIn' ? (
           <a 
@@ -72,7 +77,7 @@ const Navbar = ({ navOpen }) => {
             ref={ref}
             className={className}
           >
-            <div className="flex items-center justify-between hover:text-zinc-50 transition-colors">
+            <div className="flex items-center justify-between hover:text-zinc-50">
               {label}
               <div className="material-symbols-rounded text-[20px]">
                 arrow_outward

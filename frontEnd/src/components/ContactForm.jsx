@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from './AnimateIn'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import axios from 'axios'
@@ -25,40 +26,37 @@ const ContactForm = () => {
     const [message, setMessage] = useState('')
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        
+        e.preventDefault();
 
-        const serviceId = 'service_djwfdof'
-        const templateId = 'template_g4nk4qg'
-        const publicKey = 'BeP_E7EMCzvlzf8oL'
+        const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+        });
 
-        const data = {
-            service_id: serviceId,
-            template_id: templateId,
-            user_id: publicKey,
-            template_params: {
-                from_name: name,
-                from_email: email,
-                to_name: 'Leandro',
-                message: message,
-            }
+        if (!res.ok) {
+        throw new Error("Erro no servidor");
         }
 
-        try{
-            const res = await axios.post('https://api.emailjs.com/api/v1.0/email/send', data)
-            console.log(res.data)
-            setName('')
-            setEmail('')
-            setMessage('')
+        const data = await res.json();
+
+        if (data.success) {
             successDiv.classList.add('cardShow')
             setTimeout(() => {
                 successDiv.classList.remove('cardShow')
-            }, 2600)
-        } catch (error){
-            console.error(error)
+            }, 3000);
+            setName('')
+            setEmail('')
+            setMessage('')
+            document.querySelectorAll('form input, form textarea').forEach(input => input.value = '')
+        } else {
             errorDiv.classList.add('cardShow')
             setTimeout(() => {
                 errorDiv.classList.remove('cardShow')
-            }, 2600)
+            }, 3000);
         }
 
     }
@@ -73,71 +71,85 @@ const ContactForm = () => {
     >
 
         <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
-            <div className="mb-4">
-                <label 
-                    htmlFor="name"
-                    className="label reveal-up"
-                >
-                    Nome
-                </label>
+            <AnimateIn delay={300}>
+                <div className="mb-4">
+                    <label 
+                        htmlFor="name"
+                        className="label"
+                    >
+                        Nome
+                    </label>
 
-                <input 
-                    required
-                    type="text" 
-                    name="name" 
-                    placeholder="Seu nome"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="text-field reveal-up"
-                />
-            </div>
+                    <input 
+                        required
+                        type="text" 
+                        id="name"
+                        name="name" 
+                        placeholder="Seu nome"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        autoComplete="off"
+                        className="text-field"
+                    />
+                </div>
+            </AnimateIn>
 
-            <div className="mb-4">
-                <label 
-                    htmlFor="email"
-                    className="label reveal-up"
-                >
-                    Email
-                </label>
+            <AnimateIn delay={300}>
+                <div className="mb-4">
+                    <label 
+                        htmlFor="email"
+                        className="label"
+                    >
+                        Email
+                    </label>
 
-                <input 
-                    required
-                    type="email" 
-                    name="email" 
-                    placeholder="seuemail@exemplo.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="text-field reveal-up"
-                />
-            </div>
+                    <input 
+                        required
+                        type="email" 
+                        id="email"
+                        name="email" 
+                        placeholder="seuemail@exemplo.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        autoComplete="off"
+                        className="text-field"
+                    />
+                </div>
+            </AnimateIn>
         </div>
 
-        <div className="mb-4">
-            <label 
-                htmlFor="message" 
-                className="label reveal-up"
+        <AnimateIn delay={400}>
+            <div className="mb-4">
+                <label 
+                    htmlFor="message" 
+                    className="label"
+                >
+                    Message
+                </label>
+
+                <textarea 
+                    required
+                    id="message"
+                    name="message"
+                    placeholder="Olá!"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    autoComplete="off"
+                    className="text-field resize-y min-h-32 max-h-80"
+                >
+
+                </textarea>
+            </div>
+        </AnimateIn>
+
+        <AnimateIn delay={500}>
+            <button 
+                type="submit" 
+                className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer"
             >
-                Message
-            </label>
-
-            <textarea 
-                required
-                name="message" 
-                placeholder="Olá!"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="text-field resize-y min-h-32 max-h-80 reveal-up"
-            >
-
-            </textarea>
-        </div>
-
-        <button 
-            type="submit" 
-            className="btn btn-primary !max-w-full w-full justify-center hover:cursor-pointer reveal-up"
-        >
-            Enviar
-        </button>
+                Enviar
+            </button>
+        </AnimateIn>
 
     </form>
   )

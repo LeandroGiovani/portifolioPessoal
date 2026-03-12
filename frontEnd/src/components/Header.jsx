@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import AnimateIn from "./AnimateIn";
 import logo from '../assets/img/logoLW.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -29,7 +30,7 @@ const Header = () => {
       alt: 'GitHub'
     },
     {
-      href: 'https://www.linkedin.com/in/leandro-maciel-giovani-2874501b3/',
+      href: 'https://www.linkedin.com/in/leandrogiovani/',
       icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.75 3C4.24011 3 3 4.24011 3 5.75V18.25C3 19.7599 4.24011 21 5.75 21H18.25C19.7599 21 21 19.7599 21 18.25V5.75C21 4.24011 19.7599 3 18.25 3H5.75ZM5.75 4.5H18.25C18.9491 4.5 19.5 5.05089 19.5 5.75V18.25C19.5 18.9491 18.9491 19.5 18.25 19.5H5.75C5.05089 19.5 4.5 18.9491 4.5 18.25V5.75C4.5 5.05089 5.05089 4.5 5.75 4.5ZM7.75 6.5C7.41848 6.5 7.10054 6.6317 6.86612 6.86612C6.6317 7.10054 6.5 7.41848 6.5 7.75C6.5 8.08152 6.6317 8.39946 6.86612 8.63388C7.10054 8.8683 7.41848 9 7.75 9C8.08152 9 8.39946 8.8683 8.63388 8.63388C8.8683 8.39946 9 8.08152 9 7.75C9 7.41848 8.8683 7.10054 8.63388 6.86612C8.39946 6.6317 8.08152 6.5 7.75 6.5ZM7 10C6.7235 10 6.5 10.2235 6.5 10.5V17C6.5 17.2765 6.7235 17.5 7 17.5H8.5C8.7765 17.5 9 17.2765 9 17V10.5C9 10.2235 8.7765 10 8.5 10H7ZM10.5 10C10.2235 10 10 10.2235 10 10.5V17C10 17.2765 10.2235 17.5 10.5 17.5H12C12.2765 17.5 12.5 17.2765 12.5 17V13.25C12.5 12.5605 13.0605 12 13.75 12C14.4395 12 15 12.5605 15 13.25V17C15 17.2765 15.2235 17.5 15.5 17.5H17C17.2765 17.5 17.5 17.2765 17.5 17V13C17.5 11.3455 16.1545 10 14.5 10C13.731 10 13.0315 10.293 12.5 10.7705V10.5C12.5 10.2235 12.2765 10 12 10H10.5Z" fill="currentColor" />
             </svg>,
@@ -38,19 +39,21 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
-      <div className="max-w-screen-2xl w-full flex justify-between items-center min-[920px]:grid min-[920px]:grid-cols-[1fr_3fr_1fr] max-2xl:!px-6">
+    <header className="fixed top-0 left-0 w-full h-20 flex justify-center items-center z-40">
+      <div className="max-w-screen-2xl w-full flex justify-between items-center header-grid max-2xl:!px-6">
 
-        <h1>
-          <Link to="/" className="logo revealNav9">
-            <img 
-              src={logo} 
-              width={50} 
-              height={50} 
-              alt="Leandro Giovani logo" 
-            />
-          </Link>
-        </h1>
+        <AnimateIn delay={300}>
+          <h1>
+            <Link to="/" className="logo">
+              <img 
+                src={logo} 
+                width={50} 
+                height={50} 
+                alt="Leandro Giovani logo" 
+              />
+            </Link>
+          </h1>
+        </AnimateIn>
 
         <div className="relative min-[920px]:justify-self-center">
           <button
@@ -67,14 +70,14 @@ const Header = () => {
 
         <div 
           href="#contact" 
-          className="flex items-center gap-3 max-[920px]:!hidden min-[920px]:justify-self-end revealNav9"
+          className="flex items-center gap-3 max-[920px]:!hidden min-[920px]:justify-self-end"
         >
           {socialLinks.map(({ icon, href, alt }, key) => (
             <a
               key={key}
               href={href}
               target='_blank'
-              className="w-12 h-12 flex items-center justify-center ring-inset ring-2 ring-zinc-50/5 text-zinc-50/50 rounded-lg hover:bg-zinc-50/20 active:bg-zinc-50/40 transition-colors duration-300"
+              className="w-12 h-12 flex items-center justify-center bg-zinc-900 border-glow text-zinc-400 rounded-lg hover:bg-zinc-800 hover:ring-zinc-700 active:bg-zinc-900 transition-colors duration-300"
             >
               {icon}
             </a>

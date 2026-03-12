@@ -14,6 +14,7 @@
 
 import LandPage from "../components/LandPage"
 import About from "../components/About"
+import Experience from "../components/Experience"
 import Skill from "../components/Skill"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
@@ -26,6 +27,7 @@ const Home = () => {
 
       <main>
         <About />
+        <Experience />
         <Skill />
         <Projects />
         <Contact />
