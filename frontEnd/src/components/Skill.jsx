@@ -32,6 +32,7 @@ import bootstrapL from "../assets/img/bootstrap.svg";
 import gitL from "../assets/img/git.svg";
 import dockerL from "../assets/img/docker.svg";
 import awsL from "../assets/img/aws.svg";
+import gcpL from "../assets/img/gcp.svg";
 
 const Skill = () => {
   const skillItem = [
@@ -138,39 +139,44 @@ const Skill = () => {
       imgSrc: awsL,
       label: "AWS",
       desc: "Cloud Platform"
+    },
+    {
+      imgSrc: gcpL,
+      label: "GCP",
+      desc: "Cloud Platform"
     }
   ];
 
   return (
     <section className="section" id="skills">
-        <div className="container">
+      <div className="container">
 
-          <AnimateIn delay={300}>
-            <h2 className="skills-title">
-                Principais Tecnologias
-            </h2>
+        <AnimateIn delay={300}>
+          <h2 className="skills-title">
+            Principais Tecnologias
+          </h2>
 
-            <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
-                Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
-            </p>
-          </AnimateIn>
+          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]">
+            Descubra as ferramentas e tecnologias poderosas que utilizo para criar sites e aplicativos excepcionais.
+          </p>
+        </AnimateIn>
 
-          <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
-              {
-                  skillItem.map(({ imgSrc, label, desc }, key) => (
-                      <AnimateIn key={key} delay={key * 30}>
-                        <SkillCard 
-                          key={key}
-                          imgSrc={imgSrc}
-                          label={label}
-                          desc={desc}
-                        />
-                      </AnimateIn>
-                  ))
-              }
-          </div>
-
+        <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
+          {
+            skillItem.map(({ imgSrc, label, desc }, key) => (
+              <AnimateIn key={key} delay={key * 30}>
+                <SkillCard
+                  key={key}
+                  imgSrc={imgSrc}
+                  label={label}
+                  desc={desc}
+                />
+              </AnimateIn>
+            ))
+          }
         </div>
+
+      </div>
     </section>
   )
 }
