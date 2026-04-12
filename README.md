@@ -1,8 +1,8 @@
 # Portfólio Pessoal
 Este é o repositório do meu portfólio pessoal, desenvolvido com React e Vite. O objetivo deste projeto é apresentar meus trabalhos, habilidades e experiências de forma interativa e visualmente atraente.
 
-## Acesso ao Portifolio
-Você pode acessar a versão hospedada do projeto através do seguinte link: [Portifólio](https://leandro-giovani.vercel.app). (Isso pode levar algum tempo).
+## Acesso ao Portfólio
+Você pode acessar a versão hospedada do projeto através do seguinte link: [Portfólio](https://leandro-giovani.vercel.app). (Isso pode levar algum tempo).
 
 ## Tecnologias Utilizadas
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
@@ -27,11 +27,11 @@ Você pode acessar a versão hospedada do projeto através do seguinte link: [Po
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/LeandroGiovani/portifolioPessoal.git
+   git clone https://github.com/LeandroGiovani/portfolioPessoal.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   cd portifolioPessoal/
+   cd portfolioPessoal/
    ```
 3. Instale as dependências:
    ```bash
